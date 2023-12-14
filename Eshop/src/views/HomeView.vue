@@ -1,9 +1,13 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
-
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+    <Hero1 />
 </template>
+
+<script>
+    import Hero1 from '@/components/Hero1.vue'
+
+    export default {
+        components: {
+            Hero1,
+        }
+    }
+</script>
