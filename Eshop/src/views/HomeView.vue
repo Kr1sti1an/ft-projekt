@@ -1,13 +1,16 @@
 <template>
-    <Hero1 />
+    <Hero />
+    <Categories/>
 </template>
 
 <script>
-    import Hero1 from '@/components/Hero1.vue'
+    import Hero from '@/components/Hero.vue'
+    import Categories from '@/components/Categories.vue'
 
     export default {
         components: {
-            Hero1,
+            Hero,
+            Categories,
         }
     }
 </script>
