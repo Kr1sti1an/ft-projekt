@@ -28,10 +28,6 @@
               class="nav-link block py-2 pl-3 pr-4 text-[16px] text-navlinks rounded md:border-0 md:p-0">Vybavenie</router-link>
           </li>
           <li class="flex justify-center">
-            <router-link to="/contact" @click="closeMenu"
-              class="nav-link block py-2 pl-3 pr-4 text-[16px] text-navlinks rounded md:border-0 md:p-0">Kontakt</router-link>
-          </li>
-          <li class="flex justify-center">
             <router-link to="" @click="closeMenu"
               class="block py-2 pl-3 pr-4 text-[16px] text-navlinks rounded md:border-0 md:p-0">
               <div class="icons"><i class="material-icons">shopping_cart</i></div>
