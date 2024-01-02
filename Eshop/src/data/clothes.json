@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Čierne tričko",
+    "image": "1-tricko.jpg",
+    "price": 20
+  },
+  {
+    "name": "Hnedé tričko",
+    "image": "2-tricko.jpg",
+    "price": 35
+  },
+  {
+    "name": "Biele ponožky",
+    "image": "3-ponozky.jpg",
+    "price": 20
+  },
+  {
+    "name": "Dlhé čierne tričko",
+    "image": "4-tricko.jpg",
+    "price": 25
+  },
+  {
+    "name": "Sivá mikina",
+    "image": "5-tricko.jpg",
+    "price": 30
+  },
+  {
+    "name": "Čierno-biele gate",
+    "image": "6-gate.jpg",
+    "price": 25
+  },
+  {
+    "name": "Čierne legíny",
+    "image": "7-gate.jpg",
+    "price": 40
+  },
+  {
+    "name": "Čierne kraťasy",
+    "image": "8-gate.jpg",
+    "price": 22
+  },
+  {
+    "name": "Červené tričko",
+    "image": "9-tricko.jpg",
+    "price": 10
+  },
+  {
+    "name": "Bordové tepláky",
+    "image": "10-gate.jpg",
+    "price": 20
+  },
+  {
+    "name": "Červená mikina",
+    "image": "11-tricko.jpg",
+    "price": 20
+  },
+  {
+    "name": "Tyrkysová mikina",
+    "image": "12-mikina.jpg",
+    "price": 20
+  }
+]

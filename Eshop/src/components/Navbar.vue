@@ -1,5 +1,5 @@
 <template>
-  <nav class="top-0 z-50 bg-bg_navbar border-b-[1px] border-[rgb(231,231,231)]">
+  <nav class="sticky top-0 z-50 bg-bg_navbar border-b-[1px] border-[rgb(231,231,231)]">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <router-link to="/" class="flex items-start">
         <img src="../components/img/logo.png" class="h-8" alt="Logo" />
@@ -28,10 +28,10 @@
               class="nav-link block py-2 pl-3 pr-4 text-[16px] text-navlinks rounded md:border-0 md:p-0">Vybavenie</router-link>
           </li>
           <li class="flex justify-center">
-            <router-link to="" @click="closeMenu"
+            <button @click="toggleCart(); closeMenu();"
               class="block py-2 pl-3 pr-4 text-[16px] text-navlinks rounded md:border-0 md:p-0">
               <div class="icons"><i class="material-icons">shopping_cart</i></div>
-            </router-link>
+            </button>
           </li>
         </ul>
       </div>
@@ -49,7 +49,10 @@ export default {
     closeMenu() {
       const menu = document.getElementById("navbarDefault");
       menu.classList.add("hidden");
-    }
+    },
+    toggleCart() {
+      this.$emit('toggle-cart');
+    },
   }
 };
 </script>

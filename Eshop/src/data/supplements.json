@@ -1,0 +1,62 @@
+[
+  {
+    "name": "True Whey Protein",
+    "image": "13-protein.jpg",
+    "price": 20
+  },
+  {
+    "name": "Hydro ISO",
+    "image": "14-protein.jpg",
+    "price": 35
+  },
+  {
+    "name": "Protein Isolate",
+    "image": "15-protein.jpg",
+    "price": 20
+  },
+  {
+    "name": "Casein Protein",
+    "image": "16-caseine.jpg",
+    "price": 25
+  },
+  {
+    "name": "Whey Protein 360",
+    "image": "17-protein.jpg",
+    "price": 30
+  },
+  {
+    "name": "Creatine Monohydrate",
+    "image": "18-kreatin.jpg",
+    "price": 25
+  },
+  {
+    "name": "Creatine HCL",
+    "image": "19-kreatin.jpg",
+    "price": 40
+  },
+  {
+    "name": "Ca-Zn-Mg",
+    "image": "20-vitaminy.jpg",
+    "price": 22
+  },
+  {
+    "name": "Vitality Complex Drink",
+    "image": "21-vitaminy.jpg",
+    "price": 10
+  },
+  {
+    "name": "BCAA 4:1:1",
+    "image": "22-bcaa.jpg",
+    "price": 20
+  },
+  {
+    "name": "Citrulline malate",
+    "image": "23-citruline.jpg",
+    "price": 20
+  },
+  {
+    "name": "Arginine",
+    "image": "24-arginine.jpg",
+    "price": 20
+  }
+]

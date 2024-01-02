@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Expandery",
+    "image": "25-expandery.jpg",
+    "price": 20
+  },
+  {
+    "name": "Fitlopta modrá",
+    "image": "34-fitlopta.jpg",
+    "price": 25
+  },
+  {
+    "name": "Jednoručky",
+    "image": "33-cinky.jpg",
+    "price": 50
+  },
+  {
+    "name": "Roller",
+    "image": "32-roller.jpg",
+    "price": 15
+  },
+  {
+    "name": "Švihadlo so závažím",
+    "image": "31-svihadlo.jpg",
+    "price": 10
+  },
+  {
+    "name": "Švihadlo",
+    "image": "30-svihadlo.jpg",
+    "price": 12
+  },
+  {
+    "name": "Bradlá na kliky",
+    "image": "29-kliky.jpg",
+    "price": 20
+  },
+  {
+    "name": "Bradlá",
+    "image": "28-bradla.jpg",
+    "price": 45
+  },
+  {
+    "name": "Hrazda",
+    "image": "27-hrazda.jpg",
+    "price": 35
+  },
+  {
+    "name": "Expander silový",
+    "image": "26-expander.jpg",
+    "price": 15
+  },
+  {
+    "name": "Fitlopta oranžová",
+    "image": "35-fitlopta.jpg",
+    "price": 15
+  },
+  {
+    "name": "Nastaviteľná lavička",
+    "image": "36-lavicka.jpg",
+    "price": 15
+  }
+]
