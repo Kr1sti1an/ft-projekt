@@ -10,9 +10,9 @@
             </div>
             <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
               <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
-              <a class="text-indigo-500 leading-relaxed">efitness@gmail.com</a>
+              <a href="mailto:efitness@gmail.com" class="text-indigo-500 leading-relaxed">efitness@gmail.com</a>
               <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">TEL:</h2>
-              <p class="leading-relaxed">+421 948 089 291</p>
+              <a href="tel:+421948089291" class="leading-relaxed">+421 948 089 291</a>
             </div>
           </div>
         </div>

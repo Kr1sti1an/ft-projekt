@@ -1,6 +1,7 @@
 <template>
   <div class="cart-modal">
     <div class="cart-content">
+
       <button class="close-btn" @click="toggleCart">&times;</button>
       <h2 class="text-[22px]">Košík</h2>
       <div class="cart-items">
@@ -8,16 +9,19 @@
           <img class="item-image" :src="'/images_eshop/' + item.image" :alt="item.name">
           <div class="item-details">
             <h3>{{ item.name }}</h3>
-            <p>Price: {{ item.price }}</p>
-            <p>Quantity: {{ item.quantity }}</p>
+            <p>Cena: {{ item.price }}€</p>
+            <p>Množstvo: {{ item.quantity }}</p>
             <button class="remove-btn" @click="cartStore.removeFromCart(item)">Odstrániť</button>
           </div>
         </div>
       </div>
-      <div class="cart-footer">
-        <p>Spolu: {{ cartTotal }}€</p>
+     <div class="cart-footer">
+      <p class="total-amount">Spolu: {{ cartTotal }}€</p>
+      <div class="footer-buttons">
+        <button class="clear-cart-btn" @click="cartStore.clearCart">Vyprázdniť košík</button>
         <button class="checkout-btn">Zaplatiť</button>
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -74,8 +78,8 @@ export default {
   /* Zbytek vašeho CSS */
   margin-top: 20px;
   height: 240px;
-  max-height: 240px; 
-  overflow-y: auto; 
+  max-height: 240px;
+  overflow-y: auto;
 }
 
 
@@ -98,9 +102,10 @@ export default {
   margin-right: 15px;
 }
 
-.item-details h3, .item-details p {
-  font-size: 14px; 
-  margin: 5px 0; 
+.item-details h3,
+.item-details p {
+  font-size: 14px;
+  margin: 5px 0;
 }
 
 .remove-btn {
@@ -125,7 +130,32 @@ export default {
   cursor: pointer;
   border-radius: 5px;
 }
+
+.clear-cart-btn {
+  background-color: #f44336; /* Červená farba pre vyprázdnenie */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px; /* Dodatočný priestor medzi tlačidlami */
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.cart-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.total-amount {
+  margin-bottom: 10px; /* Pridá priestor medzi textom a tlačidlami */
+}
+
 </style>
 
 
-@/stores/clothes-store
