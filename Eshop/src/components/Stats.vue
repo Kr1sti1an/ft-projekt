@@ -69,4 +69,5 @@
 
 .iconify[data-icon='bi-shield'] {
   color: rgb(230, 253, 84);
-}</style>
+}
+</style>

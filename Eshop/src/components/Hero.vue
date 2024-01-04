@@ -47,10 +47,6 @@
   </section>
 </template>
 
-<script>
-
-</script>
-
 <style scoped>
 .expandable-button {
   transition: transform 0.3s ease-in-out;

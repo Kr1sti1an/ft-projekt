@@ -1,32 +1,32 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia'   //vytvorenie noveho store
 
-export const useCartStore = defineStore('cartStore', {
-  state: () => {
+export const useCartStore = defineStore('cartStore', {    //exportuje pinia store s nazvom ktory sa použiva ako identifikator storu
+  state: () => {    //počiatočny stav storu
     return {
-      products: [],
-      cart: [],
-      isPopupVisible: false
+      products: [],   //produkty
+      cart: [],       //položky v nakupnom košíku
+      isPopupVisible: false   //boolean hodnota na zobrazenie popup okna
     }
   },
   getters: {
-    cartTotal: (state) => {
+    cartTotal: (state) => {      //getter na vypočitanie celkovej sumy v košíku
       return state.cart.reduce((total, product) => {
         return total + product.price * product.quantity
       }, 0)
     },
-    cartQuantity: (state) => {
+    cartQuantity: (state) => {    //getter na celkovy počet produktov v košíku
       return state.cart.reduce((total, product) => {
         return total + product.quantity
       }, 0)
     }
   },
   actions: {
-    loadProducts(file) {
+    loadProducts(file) {    //načitanie jednotlivych .json súborov na základe aktuálneho view
       import(`@/data/${file}.json`).then((module) => {
         this.products = module.default
       })
     },
-    addToCart(product) {
+    addToCart(product) {    //akcia na pridanie položky do košíka
       const existingProduct = this.cart.find((p) => {
         return p.name === product.name
       })
@@ -38,7 +38,7 @@ export const useCartStore = defineStore('cartStore', {
       this.isPopupVisible = true
       setTimeout(() => (this.isPopupVisible = false), 2000)
     },
-    removeFromCart(product) {
+    removeFromCart(product) {   //akcia na odstranenie položky z košíka
       const existingProduct = this.cart.find((p) => p.name === product.name)
       if (existingProduct.quantity === 1) {
         this.cart = this.cart.filter((p) => p.name !== product.name)
@@ -46,11 +46,11 @@ export const useCartStore = defineStore('cartStore', {
         existingProduct.quantity--
       }
     },
-    clearCart() {
+    clearCart() {   //kompletne vymazanie položiek z košíka
       this.cart = []
     }
   },
-  persist: {
+  persist: {    //plugin ktorý umožnuje načítať a uložiť stav z perzistentného úložiska
     enabled: true,
     strategies: [
       {

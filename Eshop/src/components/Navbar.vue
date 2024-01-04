@@ -43,15 +43,15 @@
 export default {
   methods: {
     toggleMenu() {
-      const menu = document.getElementById("navbarDefault");
+      const menu = document.getElementById("navbarDefault");    //metoda na zobrazenie menu, vyhladáva element s ID a zapne ho
       menu.classList.toggle("hidden");
     },
     closeMenu() {
-      const menu = document.getElementById("navbarDefault");
+      const menu = document.getElementById("navbarDefault");    //metoda na skrytie menu, vyhladáva element s ID a vypnína ho
       menu.classList.add("hidden");
     },
     toggleCart() {
-      this.$emit('toggle-cart');
+      this.$emit('toggle-cart');    //metoda ktorá emituje udalosť do nadradeného komponentu app.vue
     },
   }
 };

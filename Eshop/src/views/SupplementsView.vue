@@ -9,7 +9,7 @@
       <h1 class="text-2xl font-bold mb-2 mt-4 px-8">Suplementy</h1>
       <div class="flex flex-wrap justify-between">
         <div v-for="(item, index) in cartStore.products" :key="index"
-          class="product-item flex flex-col sm:w-1/2 md:w-1/4 lg:w-1/4 p-8">
+          class="product-item flex flex-col sm:w-1/2 md:w-1/4 lg:w-1/4 p-8">    <!-- iterácia pre zobrazenie produktov -->
           <div class="image-container rounded-lg overflow-hidden">
             <img class="product-image" :src="'/images_eshop/' + item.image" :alt="item.name">
           </div>
@@ -29,21 +29,16 @@
 </template>
 
 <script>
-import { useCartStore } from "@/stores/cartStore.js"
+import { useCartStore } from "@/stores/cartStore.js"    //importuje store
 export default {
   data() {
-    const cartStore = useCartStore();
+    const cartStore = useCartStore();   //vracia objekt obsahujuci cartStore, toto je inštancia pre nakupný košík
     return {
       cartStore,
     }
   },
   created() {
-    this.cartStore.loadProducts('supplements');
-  },
-  methods: {
-    addToCart(item) {
-      this.cartStore.addToCart(item);
-    }
+    this.cartStore.loadProducts('supplements');   //hook životneho cyklu, volá sa pri vytvorení komponentu, tu sa načitavaju produkty do cartStoru
   }
 }
 </script>

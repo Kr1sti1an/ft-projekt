@@ -2,8 +2,10 @@
   <section class="text-gray-600 body-font bg-bg_newsletter">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-12">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 text-white">Zostaňte v Kruhu Noviniek</h1>
-        <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-white">Buďte prví, kto sa dozvie o našich najnovších fitness
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 text-white">Zostaňte v Kruhu Noviniek
+        </h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-white">Buďte prví, kto sa dozvie o našich najnovších
+          fitness
           produktoch, exkluzívnych ponukách a špeciálnych udalostiach. Pripojte sa k našej komunite nadšencov zdravého
           životného štýlu.</p>
       </div>

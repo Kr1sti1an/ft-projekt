@@ -1,11 +1,11 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia'   //vytvorenie noveho store
 import clothesImage from '@/components/img/clothes.jpg'
 import supplementsImage from '@/components/img/supplements.jpg'
 import accessoriesImage from '@/components/img/accessories.jpg'
 
 export const useCategoryStore = defineStore('category', {
-  state: () => ({
-    categories: [
+  state: () => ({     //state definuje počiatočny stav storu
+    categories: [     //pole objektov, kde každy objekt predstavuje kategoriu
       {
         name: 'Oblečenie',
         description:

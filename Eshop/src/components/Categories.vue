@@ -26,6 +26,23 @@
     </div>
 </template>
 
+<script>
+import { useCategoryStore } from '@/stores/category-store';     //import pre pristup k store
+import { RouterLink } from 'vue-router';
+
+export default {
+    components: {
+        RouterLink      //registrovanie lokalneho komponentu
+    },
+    computed: {
+        categories() {
+            const store = useCategoryStore();       //vytvorenie vypočtovej vlastnosti, automaticky reaguje na zmeny v store a zobrazí ich
+            return store.categories;
+        }
+    }
+};
+</script>
+
 <style>
 .hover-effect:hover .arrow {
     transform: translateX(100%);
@@ -36,20 +53,3 @@
     transition: transform 0.3s ease-in-out;
 }
 </style>
-
-<script>
-import { useCategoryStore } from '@/stores/category-store';
-import { RouterLink } from 'vue-router';
-
-export default {
-    components: {
-        RouterLink
-    },
-    computed: {
-        categories() {
-            const store = useCategoryStore();
-            return store.categories;
-        }
-    }
-};
-</script>

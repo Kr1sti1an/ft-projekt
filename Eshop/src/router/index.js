@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),    //umožnuje navigaciu bez nutnosti načitanie novych stránok
   routes: [
     {
       path: '/',
@@ -12,7 +12,7 @@ const router = createRouter({
     {
       path: '/clothes',
       name: 'clothes',
-      component: () => import('../views/ClothesView.vue')
+      component: () => import('../views/ClothesView.vue')   //vyžite lazy loadingu, optimalizacia vykonu aplikacie
     },
     {
       path: '/supplements',

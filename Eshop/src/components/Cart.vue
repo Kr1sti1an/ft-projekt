@@ -1,7 +1,6 @@
 <template>
   <div class="cart-modal">
     <div class="cart-content">
-
       <button class="close-btn" @click="toggleCart">&times;</button>
       <h2 class="text-[22px]">Košík</h2>
       <div class="cart-items">
@@ -15,36 +14,35 @@
           </div>
         </div>
       </div>
-     <div class="cart-footer">
-      <p class="total-amount">Spolu: {{ cartTotal }}€</p>
-      <div class="footer-buttons">
-        <button class="clear-cart-btn" @click="cartStore.clearCart">Vyprázdniť košík</button>
-        <button class="checkout-btn">Zaplatiť</button>
+      <div class="cart-footer">
+        <p class="total-amount">Spolu: {{ cartTotal }}€</p>
+        <div class="footer-buttons">
+          <button class="clear-cart-btn" @click="cartStore.clearCart">Vyprázdniť košík</button>
+          <button class="checkout-btn">Zaplatiť</button>
+        </div>
       </div>
-    </div>
     </div>
   </div>
 </template>
 
-
 <script>
-import { useCartStore } from "@/stores/cartStore.js"
+import { useCartStore } from "@/stores/cartStore.js"    //import na použitie store
 
 export default {
   data() {
-    const cartStore = useCartStore();
+    const cartStore = useCartStore();    //vytvorenie inštancie cartStore ktora je dostupna vramci komponentu
     return {
       cartStore,
     }
   },
   computed: {
     cartTotal() {
-      return this.cartStore.cart.reduce((total, item) => total + item.price * item.quantity, 0);
+      return this.cartStore.cart.reduce((total, item) => total + item.price * item.quantity, 0);    //funkcia na vypočitanie celkovej sumy v košíku
     }
   },
   methods: {
     toggleCart() {
-      this.$emit('toggle-cart');
+      this.$emit('toggle-cart');    //metoda ktora emituje udalosť do nadradeneho komponentu v app.vue
     }
   }
 }
@@ -75,13 +73,11 @@ export default {
 }
 
 .cart-items {
-  /* Zbytek vašeho CSS */
   margin-top: 20px;
   height: 240px;
   max-height: 240px;
   overflow-y: auto;
 }
-
 
 .close-btn {
   float: right;
@@ -103,6 +99,7 @@ export default {
 }
 
 .item-details h3,
+
 .item-details p {
   font-size: 14px;
   margin: 5px 0;
@@ -132,13 +129,13 @@ export default {
 }
 
 .clear-cart-btn {
-  background-color: #f44336; /* Červená farba pre vyprázdnenie */
+  background-color: #f44336;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
-  margin-right: 10px; /* Dodatočný priestor medzi tlačidlami */
+  margin-right: 10px;
 }
 
 .footer-buttons {
@@ -146,16 +143,12 @@ export default {
   justify-content: space-between;
 }
 
-
 .cart-footer {
   display: flex;
   flex-direction: column;
 }
 
 .total-amount {
-  margin-bottom: 10px; /* Pridá priestor medzi textom a tlačidlami */
+  margin-bottom: 10px;
 }
-
 </style>
-
-
