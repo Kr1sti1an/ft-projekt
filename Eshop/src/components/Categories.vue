@@ -34,11 +34,9 @@ export default {
     components: {
         RouterLink      //registrovanie lokalneho komponentu
     },
-    computed: {
-        categories() {
-            const store = useCategoryStore();       //vytvorenie vypočtovej vlastnosti, automaticky reaguje na zmeny v store a zobrazí ich
-            return store.categories;
-        }
+    data() {
+        const store = useCategoryStore();       //automaticky reaguje na zmeny v store a zobrazí ich
+        return store;
     }
 };
 </script>
