@@ -22,7 +22,7 @@
               <router-link to="/supplements" class="text-gray-600 hover:text-gray-800">Suplementy</router-link>
             </li>
             <li>
-              <router-link to="accessories" class="text-gray-600 hover:text-gray-800">Vybavenie</router-link>
+              <router-link to="/accessories" class="text-gray-600 hover:text-gray-800">Vybavenie</router-link>
             </li>
           </nav>
         </div>
